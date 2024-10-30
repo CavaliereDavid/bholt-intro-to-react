@@ -8,6 +8,9 @@ const router = createRouter({ routeTree });
 const queryClient = new QueryClient();
 
 const App = () => {
+  {
+    /* missing step from tutorial https://react-v9.holt.courses/lessons/ecosystem/tanstack-query */
+  }
   return (
     <StrictMode>
       <QueryClientProvider client={queryClient}>

@@ -1,0 +1,26 @@
+https://www.npmjs.com/package/react-error-boundary
+
+// someone mentioned this : https://tanstack.com/query/v5/docs/reference/QueryClient#queryclientclear
+
+// holt mentioned https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+// Traditional function
+function TraditionalFunction() {
+  this.value = 1;
+  setTimeout(function() {
+    console.log(this.value); // undefined, because `this` refers to the global object
+  }, 1000);
+}
+
+// Arrow function
+function ArrowFunction() {
+  this.value = 1;
+  setTimeout(() => {
+    console.log(this.value); // 1, because `this` refers to the instance of ArrowFunction
+  }, 1000);
+}
+
+const traditional = new TraditionalFunction();
+const arrow = new ArrowFunction();
+
+
+you can't use hooks with class components
